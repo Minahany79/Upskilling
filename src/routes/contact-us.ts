@@ -14,7 +14,7 @@ contactRouter.post(
   ],
   async (req: Request, res: Response) => {
     try {
-      const errors = validationResult(req);
+      const errors = validationResult(req.body);
       if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
       }
