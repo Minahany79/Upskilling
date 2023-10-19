@@ -15,7 +15,7 @@ app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 app.get("/ping", (req: Request, res: Response) => {
-  res.status(200).json({ message: `PONG !! from UpSkilling - ${new Date()}` });
+  res.status(200).json({ message: `PONG !! from UpSkilling Domain - ${new Date()}` });
 });
 
 app.use("/", contactRouter);
