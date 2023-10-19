@@ -9,7 +9,9 @@ dotenv.config(); // Load environment variables from .env
 const app = express();
 const port = process.env.PORT;
 
-app.use(cors());
+// Enable CORS for all origins
+app.use(cors({ origin: '*' }));
+
 app.use(bodyParser.json());
 
 app.get("/ping", (req: Request, res: Response) => {
